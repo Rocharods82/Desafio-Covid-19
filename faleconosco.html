@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,22 @@
     <link rel="stylesheet" href="estilo.css">
     <title>Fale conosco</title>
 </head>
+
 <body>
 
     <header id="cabecalho">
         <h1>Covid-19</h1>
-        <h3>Notícias mais relevantes</h3>
+        <h3>Fale conosco</h3>
         <br>
 
 
 
         <nav id="menu">
             <ul type="disc">
-                <li><a href=""></a>Home</li>
-                <li><a href=""></a>Sobre</li>
-                <li><a href=""></a>Contato</li>
-                <li><a href=""></a>Saiba mais</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Sobre.html">Sobre</a></li>
+                <li><a href="faleconosco.html">Contato</a></li>
+                <li><a href="saibaMais.html">Saiba mais</a></li>
             </ul>
         </nav>
     </header>
@@ -29,17 +31,64 @@
 
     <main id="corpo">
         <article>
-        <form>
-            
-                <label for="exampleFormControlInput1">Seu Endereço de email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-            
-              
-                <label for="exampleFormControlTextarea1">Mensagem para contato</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-              
-    
-        </form>
+            <form method="POST" id="fContato" action="mailto:oliveirarodrigo.rocha@gmail.com">
+
+                <fieldset id="usuario">
+
+                    <legend>Identificação do Usuário</legend>
+                    
+                    <p><label for="cNome">Nome:</label> <input type="text" name="tNome" id="cNome" size="70"
+                        maxlength="30" placeholder="Nome completo"></p>
+                    <p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="70"
+                            maxlength="40" placeholder="exemplo@gmail.com" /></p>
+                    <fieldset id="sexo">
+                        <legend>Sexo</legend>
+                        <input type="radio" name="tSexo" id="cMasc" /><label for="cMasc" checked>Masculino</label><br />
+
+                        <input type="radio" name="tSexo" id="cFem" /><label for="cFem">Feminino</label>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                        <p>Logradouro: <input type="text" name="tRua" id="cRua" size="30" width="100%" maxlength="80"
+                                placeholder="Rua, avenida, travessa.."></p>
+                        <p>Número: <input type="number" name="tNum" id="cNum" min="1" max="9999"></p>
+
+                        <p><label for="cEst"> Estado: </label>
+                            <select name="tEst" id="cEst">
+                                <optgroup label="Região Nordeste">
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="CE">Ceara</option>
+                                    <option value="BA">Bahia</option>
+
+                                </optgroup>
+                                <optgroup label="Região Sudeste">
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <!-- Se quiser apenas enviar o valor descrito que aparece para o usuário, não use value. -->
+                                    <option  value="MG">Minas Gerais</option>
+                                </optgroup>
+
+                                <optgroup label="Região Sul">
+                                    <option value="MG">Paraná</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                </optgroup>
+                            </select></p>
+
+                        <p><label for="cCid">Cidade:</label>
+                            <input name="tCid" id="cCid" size="20" maxlength="40" placeholder="sua cidade"
+                                list="cidades"></p>
+                        
+                    </fieldset>
+
+                    <fieldset id="mensagem">
+                        <legend>Mensagem do Usuário</legend>
+
+                       <p><textarea name="tMsg" id="cMsg" cols="70" rows="8"
+                            placeholder="Deixe aqui sua mensagem"></textarea>
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Enviar</button></p>
+                    </fieldset>
+            </form>
         </article>
     </main>
 
@@ -48,11 +97,11 @@
     <footer id="rodape">
         <p>Copyright &copy; 2020 - by Rodrigo Rocha</p>
         <hr>
-        <p> <a href="http://facebook.com" target="_blank">Facebook|</a>
-            <a href="https://www.linkedin.com/in/rodrigo-oliveira-aa9b594b/" target="_blank">|Linkedin</a></p>
+        <p><a href="https://www.linkedin.com/in/rodrigo-oliveira-aa9b594b/" target="_blank">Linkedin</a></p>
 
     </footer>
 
-    
+
 </body>
+
 </html>
